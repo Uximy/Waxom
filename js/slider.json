@@ -1,0 +1,9 @@
+{
+    "slider1":{
+        "h3": "Unique and Modern Design",
+        "h2": "Portfolio PSD Template",
+        "p": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.",
+        "a": "Get Started",
+        "selector": ".viewport .head_text"
+    }
+}
