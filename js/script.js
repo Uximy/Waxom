@@ -103,7 +103,6 @@ for (let i = 0; i < Object.keys(project).length; i++) {
 window.addEventListener('scroll', function onScroll() {
     if (window.pageYOffset > numberTop - window.innerHeight / 2) {
         this.removeEventListener('scroll', onScroll);
-        console.log('я тут');
         setTimeout(function () {
             $.easing.bullshit = function (x, t, b, c, d) {
                 return (t == d) ? b + c : c * (-Math.pow(2, -10 * t / d) + 1) + b;
