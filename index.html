@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Waxom</title>
+	<link rel="icon" type="image/png"  sizes='32x32' href="images/favicon.png"/>
+	<link rel="apple-touch-icon"  sizes='32x32' href="images/favicon.png"/>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet"  href="style/slider_css/owl.carousel.css">
+    <link rel="stylesheet" href="style/slider_css/owl.theme.default.css">
 </head>
 <body>
     <header>
@@ -32,19 +36,10 @@
             </div>
             <div class="slide">
                 <div id="viewport" class="viewport">
-                    <div id="slider" class="head_text">
+                    <div id="slider" class="head_text owl-carousel">
                         
                     </div>
-                </div>
-                <div class="Arrows_slider">
-                    <img src="images/arrow_left.png" id="leftlink" alt="arrow_left">
-                    <img src="images/arrow_right.png" id="rightlink" alt="arrow_right">
-                </div>
-                <div class="dots_slider">
-                    <!-- <div class="dots_activate"></div> -->
-                    <div class="dots_disabled"></div>
-                    <div class="dots_disabled"></div>
-                </div>    
+                </div>  
             </div>
         </section>
     </header>
@@ -52,25 +47,25 @@
     <section>
         <div class="service">
             <div class="block_service">
-                <img src="images/Service/web.svg" alt="Web">
+                <i class="fi fi-rr-globe"></i>
                 <h2>Web & App Design</h2>
                 <p>Nam liber tempor cum soluta nobis eleifend 
                     option congue nihil imperdiet doming id quod mazim.</p>
             </div>
             <div class="block_service">
-                <img src="images/Service/Development.svg" alt="Development">
+                <i class="fi fi-rs-layers"></i>
                 <h2>Development</h2>
                 <p>Lorem ipsum dolor sit amet, adipiscing elit, 
                     sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
             </div>
             <div class="block_service">
-                <img src="images/Service/Customization.svg" alt="Development">
+                <i class="fi fi-rs-settings"></i>
                 <h2>Customization</h2>
                 <p>Nam liber tempor cum soluta nobis eleifend 
                     option congue nihil imperdiet doming id quod mazim.</p>
             </div>
             <div class="block_service">
-                <img src="images/Service/Marketing.svg" alt="Development">
+                <i class="fi fi-rr-folder"></i>
                 <h2>Marketing</h2>
                 <p>Nam liber tempor cum soluta nobis eleifend 
                     option congue nihil imperdiet doming id quod mazim.</p>
@@ -383,7 +378,8 @@
     </footer>
 
     <script src="js/jquery.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/slider.js"></script>
+    <script type="module" src="./js/script.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
 </body>
 </html>

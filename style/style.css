@@ -129,7 +129,7 @@ header::before{
 
 .slide {
     position: relative;
-    top: 10rem;
+    top: 15rem;
 }
 
 @media screen and (min-width: 1920px) {
@@ -212,9 +212,14 @@ header::before{
     text-transform: uppercase;
     cursor: pointer;
     top: 10px;
-    -webkit-box-shadow: 0px 3px 0px 0px rgba(115, 99, 87, 1);
-    -moz-box-shadow: 0px 3px 0px 0px rgba(115, 99, 87, 1);
-    box-shadow: 0px 3px 0px 0px rgba(115, 99, 87, 1);
+    transition: box-shadow .4s ease-in-out, background .4s ease-in-out;
+}
+
+.slider>a:hover{
+    -webkit-box-shadow: inset 0px -3px 0px 0px #736357 !important;
+    -moz-box-shadow: inset 0px -3px 0px 0px #736357 !important;
+    box-shadow: inset 0px -3px 0px 0px #736357 !important;
+    background: #877668;
 }
 
 .dots_slider {
@@ -227,30 +232,7 @@ header::before{
     top: 5rem;
 }
 
-.dots_disabled{
-    opacity: 0.502;
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
-    background-image: -moz-linear-gradient( -41deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255));
-    background-image: -webkit-linear-gradient( -41deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255));
-    background-image: -ms-linear-gradient( -41deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255));
-    cursor: pointer;
-    transition: .10s;
-}
 
-.dots_activate{
-    border-style: solid;
-    border-width: 2px;
-    border-color: rgb(211, 193, 173);
-    border-radius: 50%;
-    background-image: -moz-linear-gradient( -41deg, rgba(14, 14, 18, 0.302) 0%, rgb(45,45,53, 0.302) 100%);
-    background-image: -webkit-linear-gradient( -41deg, rgb(14,14,18, 0.302) 0%, rgb(45,45,53, 0.302) 100%);
-    background-image: -ms-linear-gradient( -41deg, rgb(14,14,18, 0.302) 0%, rgb(45,45,53, 0.302) 100%);
-    width: 11px;
-    height: 11px;
-    transition: .10s;
-}
 
 
 .service{
@@ -270,15 +252,16 @@ header::before{
     position: relative;
 }
 
-.block_service>img{
-    width: 30px;
-    height: 30px;
+.block_service>i{
+    font-size: 43px;
+    transition: color .5s ease-in-out;
 }
 
 .block_service>h2{
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
     font-size: 22px;
+    transition: color .5s ease-in-out;
 }
 
 .block_service>p{
@@ -291,7 +274,7 @@ header::before{
 
 .block_service:hover>h2{
     color: #c7b299;
-    transition: .5s;
+    
 }
 
 .block_service::after{
@@ -301,7 +284,7 @@ header::before{
     height: 3px;
     position: absolute;
     bottom: -25px;
-    transition: opacity .50s;
+    transition: opacity .50s ease-in-out;
     opacity: 0;
 }
 
@@ -310,9 +293,8 @@ header::before{
     opacity: 100;
 }
 
-.block_service:hover>img{
-    filter: sepia(100%);
-    transition: .5s;
+.block_service:hover>i{
+    color: #c7b299;
 }
 
 .realization_ideas{
@@ -553,6 +535,7 @@ header::before{
     padding-left: 15px;
     z-index: 1;
     transition: .5s ease-out;
+    position: relative;
 }
 
 .blocktext_project>h3{
@@ -569,7 +552,7 @@ header::before{
 .blocktext_project::before{
     content: url("../images/arrow.png") !important;
     position: absolute;
-    bottom: 112px;
+    top: -14px;
     left: 19px;
 }
 
@@ -850,6 +833,7 @@ header::before{
     display: flex;
     flex-direction: column;
     position: relative;
+    transition: background .5s ease-in-out;
 }
 
 .postslider{
@@ -883,6 +867,7 @@ header::before{
     height: 35px;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
+    transition: background-color .5s ease-in-out;
 }
 
 .datepublic>span{
@@ -899,6 +884,7 @@ header::before{
     height: 25px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
+    transition: background-color .5s ease-in-out;
 }
 
 .dots_post{
@@ -950,6 +936,7 @@ header::before{
     color: rgb(85, 85, 85);
     line-height: 1.2;
     margin-top: 23px;
+    transition: color .5s ease-in-out;
 }
 
 .textpost>p{
@@ -960,6 +947,7 @@ header::before{
     width: 297px;
     margin-top: 5px;
     margin-bottom: 21px;
+    transition: color .5s ease-in-out;
 }
 
 .textpost>a{
@@ -977,7 +965,6 @@ header::before{
 
 .BlockPost:hover{
     background-color: #362f2d;
-    transition: .5s;
 }
 
 .BlockPost:hover>.postslider:before{
@@ -987,27 +974,23 @@ header::before{
     width: 100%;
     bottom: 0;
     height: 100%;
-    transition: .5s;
+    transition: background .15s ease-in-out;
 }
 
 .BlockPost:hover>.textpost h2{
     color: #c7b299;
-    transition: .5s;
 }
 
 .BlockPost:hover>.textpost p{
     color: #fff;
-    transition: .5s;
 }
 
 .BlockPost:hover>.postslider>.datepublic h5{
     background-color: #c7b299;
-    transition: .5s;
 }
 
 .BlockPost:hover>.postslider>.datepublic span{
     background-color: #a48d72;
-    transition: .5s;
 }
 
 .arrowpost{
@@ -1293,4 +1276,71 @@ footer{
     align-items: baseline;
     width: 100%;
     column-gap: 30px;
+}
+
+.owl-carousel.owl-loaded{
+    display: flex !important;
+    flex-direction:  column;
+    justify-content: center;
+    align-items: center;
+}
+
+.owl-stage-outer{
+    margin-bottom: 60px;
+    z-index: 1;
+    width: 90%;
+}
+
+.owl-carousel .owl-stage{
+    right: 60px;
+}
+
+.owl-dots{
+    z-index: 1;
+}
+
+.owl-nav{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+}
+
+.owl-next, .owl-prev{
+    transition: background .3s linear;
+    outline: none;
+    color: var(--red-color) !important;
+    
+}
+
+.owl-dot.active{
+    width: 12px;
+    height: 12px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-style: solid !important;
+    border-width: 2px !important;
+    border-color: rgb(211, 193, 173) !important;
+    background: linear-gradient( -41deg, rgba(14, 14, 18, 0.302) 0%, rgb(45,45,53, 0.302) 100%) !important;
+    border-radius: 30px;
+    opacity: 1;
+    outline: none;
+}
+
+.owl-dot{
+    width: 12px;
+    height: 12px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background: linear-gradient( -41deg, rgb(14,14,18) 0%, rgb(45,45,53) 100%) !important;
+    border-radius: 30px;
+    opacity: 0.7;
+    outline: none;
+    transition: width .2s linear;
+}
+
+#web svg{
+
 }
