@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
-@import url('https://db.onlinewebfonts.com/c/c136aa346fbf887f692c9f21b2601c85?family=Montserrat+Ultra+Light');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 *{
@@ -534,7 +533,7 @@ header::before{
     padding-bottom: 27px;
     padding-left: 15px;
     z-index: 1;
-    transition: .5s ease-out;
+    transition: .5s ease-in-out;
     position: relative;
 }
 
@@ -547,17 +546,6 @@ header::before{
     margin-top: 34px;
     margin-bottom: 10px;
     transition: .5s ease-out;
-}
-
-.blocktext_project::before{
-    content: url("../images/arrow.png") !important;
-    position: absolute;
-    top: -14px;
-    left: 19px;
-}
-
-.project:hover>.blocktext_project::before{
-    content: url("../images/arrow_dark.png") !important;
 }
   
 .blocktext_project>p{
@@ -575,12 +563,12 @@ header::before{
 
 .project:hover>.blocktext_project>h3{
     color: #fff;
-    transition: .5s ease-in;
+    transition: .5s ease-in-out;
 }
 
 .project:hover>.blocktext_project>p{
     color: #c7b299;
-    transition: .5s;
+    transition: .5s ease-in-out;
 }
 
 .hovers {
@@ -1341,6 +1329,16 @@ footer{
     transition: width .2s linear;
 }
 
-#web svg{
+.blocktext_project svg {
+    fill: #fff;
+    position: absolute;
+    top: -12px;
+    left: 19px;
+    width: 30px;
+    height: 12px;
+    transition: fill .5s ease-in-out;
+}
 
+.project:hover>.blocktext_project svg{
+    fill: #362f2d;
 }
