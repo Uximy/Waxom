@@ -1,0 +1,50 @@
+{
+    "Project1": {
+        "img": "images/Projects/project1.png",
+        "link1":"/Waxom",
+        "link2":"/Waxom",
+        "h3":"Claritas Etiam Processus",
+        "p":"Photography, Nature",
+        "selector": ".block_projects"
+    },
+    "Project2": {
+        "img": "images/Projects/project2.png",
+        "link1":"/Waxom",
+        "link2":"/Waxom",
+        "h3":"Quam Nutamus Farum",
+        "p":"Graphic Design, Mock-Up",
+        "selector": ".block_projects"
+    },
+    "Project3": {
+        "img": "images/Projects/project3.png",
+        "link1":"/Waxom",
+        "link2":"/Waxom",
+        "h3":"Usus Legentis Videntur",
+        "p":"Photography, Holiday",
+        "selector": ".block_projects"
+    },
+    "Project4": {
+        "img": "images/Projects/project4.png",
+        "link1":"/Waxom",
+        "link2":"/Waxom",
+        "h3":"Claritas Etiam Processus",
+        "p":"Photography, Nature",
+        "selector": ".block_projects"
+    },
+    "Project5": {
+        "img": "images/Projects/project5.png",
+        "link1":"/Waxom",
+        "link2":"/Waxom",
+        "h3":"Quam Nutamus Farum",
+        "p":"Graphic Design, Mock-Up",
+        "selector": ".block_projects"
+    },
+    "Project6": {
+        "img": "images/Projects/project6.png",
+        "link1":"/Waxom",
+        "link2":"/Waxom",
+        "h3":"Usus Legentis Videntur",
+        "p":"Photography, Holiday",
+        "selector": ".block_projects"
+    }
+}
