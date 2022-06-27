@@ -5,13 +5,13 @@ var navBtnId = 0;
 var translateWidth = 0;
 
 $(document).ready(function() {
-    // var switchInterval = setInterval(nextSlide, slideInterval);
+    var switchInterval = setInterval(nextSlide, slideInterval);
 
-    // $('#viewport').hover(function() {
-    //     clearInterval(switchInterval);
-    // }, function() {
-    //     switchInterval = setInterval(nextSlide, slideInterval);
-    // });
+    $('#viewport').hover(function() {
+        clearInterval(switchInterval);
+    }, function() {
+        switchInterval = setInterval(nextSlide, slideInterval);
+    });
 
     $('#rightlink').click(function() {
         nextSlide();

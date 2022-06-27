@@ -1,13 +1,13 @@
-'use strict';
+import text from '../js/slider.json' assert { type: "json" };
 
-
-class Slider{
+class Render_Slider{
     
-    constructor(h3, h2, p, a, parentSelector,...classes){
+    constructor(h3, h2, p, a, link,parentSelector,...classes){
         this.h3 = h3;
         this.h2 = h2;
         this.p = p;
         this.a = a;
+        this.link = link;
         this.classes = classes;
         this.parent = document.querySelector(parentSelector);
     }
@@ -26,24 +26,19 @@ class Slider{
             <h3>${this.h3}</h3>
             <h2>${this.h2}</h2>
             <p>${this.p}</p>
-            <a href="#">${this.a}</a>
+            <a href="${this.link}">${this.a}</a>
         `;
         this.parent.append(element);
     }
 }
 
-new Slider(
-    "Unique and Modern Design",
-    "Portfolio PSD Template",
-    'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.',
-    'Get Started',
-    '.viewport .head_text'
-).render();
-
-new Slider(
-    "Unique and Modern Design",
-    "Portfolio PSD Template",
-    'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.',
-    'Get Started',
-    '.viewport .head_text'
-).render();
+for (let i = 0; i < Object.keys(text).length; i++) {
+    new Render_Slider(
+        text[Object.keys(text)[i]].h3,
+        text[Object.keys(text)[i]].h2,
+        text[Object.keys(text)[i]].p,
+        text[Object.keys(text)[i]].a,
+        text[Object.keys(text)[i]].link,
+        text[Object.keys(text)[i]].selector
+    ).render();
+}

@@ -4,6 +4,39 @@
         "h2": "Portfolio PSD Template",
         "p": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.",
         "a": "Get Started",
+        "link": "/",
+        "selector": ".viewport .head_text"
+    },
+    "slider2":{
+        "h3": "Unique and Modern Design",
+        "h2": "Portfolio PSD Template",
+        "p": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.",
+        "a": "Get Started",
+        "link": "/",
+        "selector": ".viewport .head_text"
+    },
+    "slider3":{
+        "h3": "Unique and Modern Design",
+        "h2": "Portfolio PSD Template",
+        "p": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.",
+        "a": "Get Started",
+        "link": "/",
+        "selector": ".viewport .head_text"
+    },
+    "slider4":{
+        "h3": "Unique and Modern Design",
+        "h2": "Portfolio PSD Template",
+        "p": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.",
+        "a": "Get Started",
+        "link": "/",
+        "selector": ".viewport .head_text"
+    },
+    "slider5":{
+        "h3": "Unique and Modern Design",
+        "h2": "Portfolio PSD Template",
+        "p": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.",
+        "a": "Get Started",
+        "link": "/",
         "selector": ".viewport .head_text"
     }
 }
