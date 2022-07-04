@@ -3,7 +3,7 @@ $(document).ready(function () {
         loop:true,
         margin: 10,
         nav:true,
-        navText: ['<img src="images/arrow_left.png" id="leftlink" alt="arrow_left">','<img src="images/arrow_right.png" id="rightlink" alt="arrow_right">'],
+        navText: ['<i class="fi fi-rs-angle-left"></i>','<i class="fi fi-rs-angle-right"></i>'],
         mouseDrag: true,
         autoplay: false,
         center: true,
