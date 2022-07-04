@@ -26,7 +26,7 @@ header{
 header::before{
     content: "";
     position: absolute;
-    background: #11111170;
+    background: #1111115e;
     width: 100%;
     bottom: 0;
     height: 100%;
@@ -52,7 +52,27 @@ header::before{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    padding-top: 15px;
+    top: -80px;
+}
+
+.menu_head_fixed{
+    background: linear-gradient(to right, #231d1b, #513a2e);
+    box-shadow: 0 2px 4px -3px #000000;
+    position: fixed;
+    width: 100%;
+    height: 71px;
+    padding: 5px 0 !important;
+    z-index: 3;
+    top: 0px !important;
+    animation-name: uk-fade-top;
+    transition: all 0.8s;
+}
+
+[class*='menu_head'] {
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
 }
 
 .menu_head ul{
@@ -85,6 +105,8 @@ header::before{
 }
 
 .icons_head{
+    display: flex;
+    column-gap: 8px;
     padding-left: 65px;
 }
 
@@ -92,10 +114,6 @@ header::before{
     color: #fff;
     font-size: 16px;
     transition: .3s ease-out;
-}
-
-.icons_head>a:nth-child(1){
-    padding-right: 5px;
 }
 
 .icons_head>a:hover{
@@ -1341,4 +1359,14 @@ footer{
 
 .project:hover>.blocktext_project svg{
     fill: #362f2d;
+}
+
+.owl-nav i {
+    font-size: 68px;
+    color: #b9b8b8;
+    transition: color 0.5s ease-in-out;
+}
+
+.owl-nav > button:hover i {
+    color: #d2c0ac;
 }
