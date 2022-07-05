@@ -1,7 +1,5 @@
 import slider from '../js/slider.json' assert { type: "json" };
 import project from '../js/projects.json' assert { type: "json" };
-let number = document.querySelector('.Counters'),
-    numberTop = number.getBoundingClientRect().top;
 
 
 class Render_Slider {
@@ -100,6 +98,9 @@ for (let i = 0; i < Object.keys(project).length; i++) {
     ).render();
 }
 
+let number = document.querySelector('.Counters'),
+    numberTop = number.getBoundingClientRect().top;
+
 window.addEventListener('scroll', function onScroll() {
     if (window.pageYOffset > numberTop - window.innerHeight / 2) {
         this.removeEventListener('scroll', onScroll);
@@ -124,13 +125,85 @@ window.addEventListener('scroll', function onScroll() {
 });
 
 $(function () { //? Функция для появления шапки при прокрутке
-    let header = $('.menu_head');
-    let background = $('#background').height();
+    let header = $('.menu_head'); //достаём класс menu_head, для того чтобы на него налепливать класс menu_head_fixed
+    let background = $('#background').height(); // получаем полный размер по высоте блок #background
     $(window).scroll(function () {
-        if ($(this).scrollTop() > background) {
+        if ($(this).scrollTop() > 1) {
+            header.addClass('fixed');
             header.addClass('menu_head_fixed');
-        } else {
+        }
+        else {
+            header.removeClass('fixed');
             header.removeClass('menu_head_fixed');
+
         }
     });
 });
+
+const item = document.querySelectorAll('.browser-right'),
+    item2 = document.querySelectorAll('.browser-left'),
+    item3 = document.querySelectorAll('.browser-center');
+const block = document.querySelector('.realization_ideas');
+
+if (item.length > 0) {
+    window.addEventListener('scroll', animeOnScroll);
+    function animeOnScroll() {
+        const animItemHeight = block.offsetHeight,
+        animItemOffset = offSet(block).top,
+        animStart = 5;
+        for (let i = 0; i < item.length; i++) {
+            const animeItem = item[i];
+
+            let animItemPont = window.innerHeight - animItemHeight / animStart;
+
+            if (animItemHeight > window.innerHeight) {
+                animItemPont = window.innerHeight - window.innerHeight / animStart;
+            }
+
+            if ((pageYOffset > animItemOffset - animItemPont) && pageYOffset < (animItemOffset + animItemHeight)) {
+                setTimeout(() => {
+                    animeItem.classList.add('right');
+                }, 1200);
+            }
+        }
+
+        for (let i = 0; i < item2.length; i++) {
+            const animeItem = item3[i];
+
+
+            let animItemPont = window.innerHeight - animItemHeight / animStart;
+
+            if (animItemHeight > window.innerHeight) {
+                animItemPont = window.innerHeight - window.innerHeight / animStart;
+            }
+
+            if ((pageYOffset > animItemOffset - animItemPont) && pageYOffset < (animItemOffset + animItemHeight)) {
+                setTimeout(() => {
+                    animeItem.classList.add('show');
+                }, 1200);
+            }
+        }
+
+        for (let i = 0; i < item2.length; i++) {
+            const animeItem = item2[i];
+
+            let animItemPont = window.innerHeight - animItemHeight / animStart;
+
+            if (animItemHeight > window.innerHeight) {
+                animItemPont = window.innerHeight - window.innerHeight / animStart;
+            }
+
+            if ((pageYOffset > animItemOffset - animItemPont) && pageYOffset < (animItemOffset + animItemHeight)) {
+                setTimeout(() => {
+                    animeItem.classList.add('left');
+                }, 1200);
+            }
+        }
+    }
+    function offSet(el) {
+        const rect = el.getBoundingClientRect(),
+            csrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+            csrolltop = window.pageYOffset || document.documentElement.scrollTop;
+        return { top: rect.top + screenTop, left: rect.left + screenLeft }
+    }
+}
