@@ -834,13 +834,19 @@ header::before {
     margin-bottom: 32px;
 }
 
-.block_counter>span {
+.viz {
+    opacity: 1 !important;
+    transition: 1s;
+}
+
+.block_counter>.number {
     font-size: 48px;
     font-family: "Montserrat Ultra Light", sans-serif;
     color: rgb(255, 255, 255);
     line-height: 0.75;
     text-align: center;
     margin-bottom: 21px;
+    opacity: 0;
 }
 
 .block_counter>p {
