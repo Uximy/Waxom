@@ -540,14 +540,15 @@ header::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: .3s ease-out;
+    transition: .5s ease-out;
 }
 
 .menu_projects>li>a:hover {
     border-radius: 3px;
     background-color: #998675;
+    box-shadow: 0px 3px 0px 0px #736357;
     color: #fff;
-    transition: .3s ease-in;
+    transition: .5s ease-in;
 }
 
 .block_projects {
