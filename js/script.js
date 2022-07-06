@@ -98,35 +98,40 @@ for (let i = 0; i < Object.keys(project).length; i++) {
     ).render();
 }
 
-let number = document.querySelector('.Counters'),
-    numberTop = number.getBoundingClientRect().top;
-
-window.addEventListener('scroll', function onScroll() {
-    if (window.pageYOffset > numberTop - window.innerHeight / 2) {
-        this.removeEventListener('scroll', onScroll);
-        setTimeout(function () {
-            $.easing.bullshit = function (x, t, b, c, d) {
-                return (t == d) ? b + c : c * (-Math.pow(2, -10 * t / d) + 1) + b;
-            };
-
-            $('.block_counter span').each(function () {
-                $(this).prop('counter', 0).animate({
-                    counter: $(this).text(),
-                }, {
-                    duration: 10000,
-                    easing: 'bullshit',
-                    step(val) {
-                        $(this).text(Math.ceil(val));
-                    },
-                });
-            });
-        }, 5);
+var time = 45,
+  cc = 1;
+$(window).scroll(function() {
+  $('#Counters').each(function() {
+    var
+      cPos = $(this).offset().top,
+      topWindow = $(window).scrollTop();
+    if (cPos < topWindow + 700) {
+      if (cc < 2) {
+        $(".number").addClass("viz");
+        $('div').each(function() {
+          var
+            i = 1,
+            num = $(this).data('num'),
+            step = 1000 * time / num,
+            that = $(this),
+            int = setInterval(function() {
+              if (i <= num) {
+                that.html(i);
+              } else {
+                cc = cc + 2;
+                clearInterval(int);
+              }
+              i++;
+            }, step);
+        });
+      }
     }
+  });
 });
+
 
 $(function () { //? Функция для появления шапки при прокрутке
     let header = $('.menu_head'); //достаём класс menu_head, для того чтобы на него налепливать класс menu_head_fixed
-    let background = $('#background').height(); // получаем полный размер по высоте блок #background
     $(window).scroll(function () {
         if ($(this).scrollTop() > 1) {
             header.addClass('fixed');
