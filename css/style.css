@@ -342,7 +342,7 @@ header::before {
     color: #c7b299;
 }
 
-.block_service:hover>.fi-rs-settings {
+.block_service:hover>.fi-ss-settings {
     transform: rotate(360deg);
 }
 
