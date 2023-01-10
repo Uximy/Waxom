@@ -1389,12 +1389,12 @@ footer {
 }
 
 .owl-dot.active {
-    width: 12px;
-    height: 12px;
+    width: 15px;
+    height: 15px;
     margin-left: 5px;
     margin-right: 5px;
     border-style: solid !important;
-    border-width: 2px !important;
+    border-width: 3px !important;
     border-color: rgb(211, 193, 173) !important;
     background: linear-gradient(-41deg, rgba(14, 14, 18, 0.302) 0%, rgb(45, 45, 53, 0.302) 100%) !important;
     border-radius: 30px;
@@ -1403,8 +1403,8 @@ footer {
 }
 
 .owl-dot {
-    width: 12px;
-    height: 12px;
+    width: 15px;
+    height: 15px;
     margin-left: 5px;
     margin-right: 5px;
     background: linear-gradient(-41deg, rgb(14, 14, 18) 0%, rgb(45, 45, 53) 100%) !important;
