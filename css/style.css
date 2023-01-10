@@ -30,7 +30,7 @@ header {
 header::before {
     content: "";
     position: absolute;
-    background: #1111115e;
+    background: #11111194;
     width: 100%;
     bottom: 0;
     height: 100%;
