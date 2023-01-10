@@ -342,7 +342,7 @@ header::before {
     color: #c7b299;
 }
 
-.block_service:hover>.fi-ss-settings {
+.block_service:hover>.fa-gear {
     transform: rotate(360deg);
 }
 
@@ -1430,10 +1430,12 @@ footer {
 
 .owl-nav i {
     font-size: 68px;
+    opacity: 0.3;
     color: #b9b8b8;
-    transition: color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .owl-nav>button:hover i {
     color: #d2c0ac;
+    opacity: 1;
 }
