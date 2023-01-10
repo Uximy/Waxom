@@ -3,7 +3,7 @@ $(document).ready(function () {
         loop:true,
         margin: 10,
         nav:true,
-        navText: ['<i class="fi fi-rs-angle-left"></i>','<i class="fi fi-rs-angle-right"></i>'],
+        navText: ['<i class="fa-solid fa-chevron-left"></i>','<i class="fa-solid fa-chevron-right"></i>'],
         mouseDrag: true,
         autoplay: false,
         center: true,
