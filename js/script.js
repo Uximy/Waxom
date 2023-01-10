@@ -69,8 +69,8 @@ class Render_Project {
         element.innerHTML = `
             <img src="${this.img}" alt="${this.alt}">
             <div class="hovers">
-                <a href="${this.link1}"><i class="fi fi-rs-link"></i></a>
-                <a href="${this.link2}"><i class="fi fi-rs-marker"></i></a>
+                <a href="${this.link1}"><i class="fa-solid fa-link"></i></a>
+                <a href="${this.link2}"><i class="fa-solid fa-magnifying-glass"></i></a>
             </div>
             <div class="blocktext_project">
                 <svg version="1.1"  width="100%" height="100px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
