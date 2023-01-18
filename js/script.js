@@ -98,7 +98,7 @@ for (let i = 0; i < Object.keys(project).length; i++) {
     ).render();
 }
 
-var time = 45,
+var time = 15,
     cc = 1;
 $(window).scroll(function() {
   $('#Counters').each(function() {
