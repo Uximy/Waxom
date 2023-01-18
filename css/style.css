@@ -1277,6 +1277,29 @@ footer {
     left: 0;
 }
 
+.fttwitterpost>p>em{
+    color: #959595;
+    font-style: normal;
+    transition: .5s ease-out; 
+}
+
+.fttwitterpost:hover>p>em {
+    color: #00bff3;
+    transition: .5s ease-in;
+}
+
+.fttwitterpost>p>a
+{
+    color: #959595;
+    font-style: normal;
+    transition: .5s ease-out; 
+}
+
+.fttwitterpost:hover>p>a {
+    color: #00bff3;
+    transition: .5s ease-in;
+}
+
 .fttwitter>.fttwitterpost:nth-child(4)>p:after {
     display: none;
 }
