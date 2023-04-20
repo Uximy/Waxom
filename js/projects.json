@@ -5,7 +5,8 @@
         "link2":"/Waxom",
         "h3":"Claritas Etiam Processus",
         "p":"Photography, Nature",
-        "selector": ".block_projects"
+        "selector": ".block_projects",
+        "Category" : "photography, illustration, mobile"
     },
     "Project2": {
         "img": "images/Projects/project2.png",
@@ -13,7 +14,8 @@
         "link2":"/Waxom",
         "h3":"Quam Nutamus Farum",
         "p":"Graphic Design, Mock-Up",
-        "selector": ".block_projects"
+        "selector": ".block_projects",
+        "Category" : "web_design"
     },
     "Project3": {
         "img": "images/Projects/project3.png",
@@ -21,7 +23,8 @@
         "link2":"/Waxom",
         "h3":"Usus Legentis Videntur",
         "p":"Photography, Holiday",
-        "selector": ".block_projects"
+        "selector": ".block_projects",
+        "Category" : "photography, web_design"
     },
     "Project4": {
         "img": "images/Projects/project4.png",
@@ -29,7 +32,8 @@
         "link2":"/Waxom",
         "h3":"Claritas Etiam Processus",
         "p":"Photography, Nature",
-        "selector": ".block_projects"
+        "selector": ".block_projects",
+        "Category" : "photography"
     },
     "Project5": {
         "img": "images/Projects/project5.png",
@@ -37,7 +41,8 @@
         "link2":"/Waxom",
         "h3":"Quam Nutamus Farum",
         "p":"Graphic Design, Mock-Up",
-        "selector": ".block_projects"
+        "selector": ".block_projects",
+        "Category" : "web_design, mobile"
     },
     "Project6": {
         "img": "images/Projects/project6.png",
@@ -45,6 +50,16 @@
         "link2":"/Waxom",
         "h3":"Usus Legentis Videntur",
         "p":"Photography, Holiday",
-        "selector": ".block_projects"
+        "selector": ".block_projects",
+        "Category" : "photography"
+    },
+    "Project7": {
+        "img": "images/Projects/project3.png",
+        "link1":"/Waxom",
+        "link2":"/Waxom",
+        "h3":"Claritas Etiam Processus",
+        "p":"Photography, Holiday",
+        "selector": ".block_projects",
+        "Category" : "mobile"
     }
 }

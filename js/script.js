@@ -1,7 +1,6 @@
 import slider from '../js/slider.json' assert { type: "json" };
 import project from '../js/projects.json' assert { type: "json" };
 
-
 class Render_Slider {
     constructor(h3, h2, p, a, link, parentSelector, ...classes) {
         this.h3 = h3;
@@ -86,7 +85,96 @@ class Render_Project {
     }
 }
 
-for (let i = 0; i < Object.keys(project).length; i++) {
+let arr = [];
+let false_all_button = 0;
+
+$(".hover_project").click(function (e) { 
+    e.preventDefault();
+    const id_elem = $(this).attr('id');
+    let projects_fing = $('.block_projects').find('.project');
+    let array_filter = [];
+
+    const backup = $(this).addClass('menu_projects_a_hover');
+    $('#'+arr[0]).removeClass('menu_projects_a_hover');
+    arr.shift();
+    if (arr.length == 0 || arr.length == 1) {
+        arr.push(backup.attr('id'));
+    }
+
+    if (false_all_button != 1) {$('#all').removeClass('menu_projects_a_hover'); false_all_button++;}
+
+    if ( projects_fing.length > 0 || projects_fing.length == 0 ) {
+        $('.project').remove();
+        $('#sumbit_load_project').remove();
+        
+        if(projects_fing.length > 0 ){
+            $('.block_projects').append('<p class="undefined">В данной категории нету данных</p>');
+            if ($('.block_projects').find('.undefined').length > 1) {
+                $('.block_projects').find('.undefined').remove();
+            }
+        }
+        
+        for (let i = 0; i < 6; i++) {
+            if (project[Object.keys(project)[i]].Category.split(',').length > 1) {
+                let arr = [];
+                
+                arr.push(project[Object.keys(project)[i]].Category.split(','));
+                arr.forEach(e => {
+                    for (let l = 0; l < e.length; l++) {
+                        if (e[l].trim() == id_elem) {
+                            new Render_Project(
+                                project[Object.keys(project)[i]].img,
+                                project[Object.keys(project)[i]].link1,
+                                project[Object.keys(project)[i]].link2,
+                                project[Object.keys(project)[i]].h3,
+                                project[Object.keys(project)[i]].p,
+                                Object.keys(project),
+                                project[Object.keys(project)[i]].selector
+                            ).render();
+                            $('.block_projects').find('.undefined').remove();
+                        }
+                    }
+                })
+            }
+            
+            if (project[Object.keys(project)[i]].Category == id_elem) {
+                new Render_Project(
+                    project[Object.keys(project)[i]].img,
+                    project[Object.keys(project)[i]].link1,
+                    project[Object.keys(project)[i]].link2,
+                    project[Object.keys(project)[i]].h3,
+                    project[Object.keys(project)[i]].p,
+                    Object.keys(project),
+                    project[Object.keys(project)[i]].selector
+                ).render();
+                $('.block_projects').find('.undefined').remove();
+            } else if (id_elem == 'all'){
+                
+                new Render_Project(
+                    project[Object.keys(project)[i]].img,
+                    project[Object.keys(project)[i]].link1,
+                    project[Object.keys(project)[i]].link2,
+                    project[Object.keys(project)[i]].h3,
+                    project[Object.keys(project)[i]].p,
+                    Object.keys(project),
+                    project[Object.keys(project)[i]].selector
+                ).render();
+                $('.block_projects').find('.undefined').remove();
+            }
+        }
+
+        
+
+        if (id_elem == 'all') {
+            $('.Latest_Projects').append('<a href="/" class="Load_More" id="sumbit_load_project">Load More</a>');
+        }
+    }
+
+    
+
+});
+
+for (let i = 0; i < 6; i++) {
     new Render_Project(
         project[Object.keys(project)[i]].img,
         project[Object.keys(project)[i]].link1,
@@ -97,6 +185,25 @@ for (let i = 0; i < Object.keys(project).length; i++) {
         project[Object.keys(project)[i]].selector
     ).render();
 }
+
+$('#sumbit_load_project').click(function (e){
+    e.preventDefault();
+    $('.project').remove();
+    $('#sumbit_load_project').remove();
+    for (let i = 0; i < Object.keys(project).length; i++) {
+        console.log(project[Object.keys(project)[i]]);
+        new Render_Project(
+            project[Object.keys(project)[i]].img,
+            project[Object.keys(project)[i]].link1,
+            project[Object.keys(project)[i]].link2,
+            project[Object.keys(project)[i]].h3,
+            project[Object.keys(project)[i]].p,
+            Object.keys(project),
+            project[Object.keys(project)[i]].selector
+        ).render();
+    }
+});
+
 
 var time = 15,
     cc = 1;
@@ -212,3 +319,12 @@ if (item.length > 0) {
         return { top: rect.top + screenTop, left: rect.left + screenLeft }
     }
 }
+
+$('#video_player').click(function (e) {
+    e.preventDefault();
+    $('#video_player').remove();
+    $('.Video_Presentation').find('img').remove();
+    $('.Video_Presentation').append(`
+    <video src="../video/video.mp4" muted autoplay loop></video>
+    `);
+})
