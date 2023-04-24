@@ -164,7 +164,7 @@ $(".hover_project").click(function (e) {
         }
 
         if (id_elem == 'all') {
-            $('.Latest_Projects').append('<a href="#" class="Load_More" id="sumbit_load_project">Load More</a>');
+            $('.Latest_Projects').append('<a href="Waxom/#" class="Load_More" id="sumbit_load_project">Load More</a>');
         }
     }
 
