@@ -12,8 +12,15 @@
     	<link rel="stylesheet" href="css/style.css">
     	<link rel="stylesheet" href="css/slider_css/owl.carousel.css">
     	<link rel="stylesheet" href="css/slider_css/owl.theme.default.css">
+        <link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet" />
 </head>
 <body>
+    <section class="hiden_photo">
+        <div class="close">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <img src="" alt="">
+    </section>
     <header>
         <img src="images/slider.png" id="background" alt="background">
         <section class="head">
@@ -99,24 +106,24 @@
                 <p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
             </div>
             <ul class="menu_projects">
-                <li><a href="#">All</a></li>
-                <li><a href="#">Web Design</a></li>
-                <li><a href="#">Mobile App</a></li>
-                <li><a href="#">Illustration</a></li>
-                <li><a href="#">Photography</a></li>
+                <li><a id="all" class="hover_project menu_projects_a_hover" href="/">All</a></li>
+                <li><a id="web_design" class="hover_project" href="/">Web Design</a></li>
+                <li><a id="mobile" class="hover_project" href="/">Mobile App</a></li>
+                <li><a id="illustration" class="hover_project" href="/">Illustration</a></li>
+                <li><a id="photography" class="hover_project" href="/">Photography</a></li>
             </ul>
             <div class="block_projects">
 
             </div>
-            <button>Load More</button>
+            <a href="#" class="Load_More" id="sumbit_load_project">Load More</a>
         </div>
 
         <div class="Video_Presentation">
-            <img src="images/video.png" alt="video">
+            <img class="img_video" src="images/video.png" alt="video">
             <div class="video_text">
-                <div class="play">
+                <a href="/" id="video_player" class="play">
                     <img src="images/play.png" alt="play">
-                </div>
+                </a>
                 <h2>Waxom Video Presentation</h2>
                 <p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius, qui sequitur mutationem consuetudium.</p>
                 <span>03:26</span>
@@ -289,9 +296,9 @@
     
             <div class="footerblock">
                 <h2>Dribbble Widget</h2>
-                <div class="imgwd">
-                    <img src="images/Widget/widget1.png" alt="widget1">
-                    <img src="images/Widget/widget2.png" alt="widget2">
+                <div id="gallery" class="imgwd">
+                    <img my_src="widget1" src="images/Widget/widget1.png" alt="widget1">
+                    <img my_src="widget2"  src="images/Widget/widget2.png" alt="widget2">
                     <img src="images/Widget/widget3.png" alt="widget3">
                     <img src="images/Widget/widget4.png" alt="widget4">
                 </div>
